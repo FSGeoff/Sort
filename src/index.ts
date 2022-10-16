@@ -1,9 +1,14 @@
-import {Sorter} from "./Sorter";
-import {NumbersCollection} from "./NumbersCollection";
+import {Sorter} from './Sorter';
+// @ts-ignore
+import {NumbersCollection} from './NumbersCollection';
+import {CharactersCollection} from "./CharacterCollections";
 
-
-const numbersCollection = new NumbersCollection([10, 3, 127, -41, 0, -5]);
-const sorter = new Sorter(numbersCollection);
-sorter.sort();
+const numbersCollection = new NumbersCollection([50, 3, -5, 0]);
+const sorter1 = new Sorter(numbersCollection);
+sorter1.sort();
 console.log(numbersCollection.data);
 
+const charactersCollection = new CharactersCollection('Xaayb');
+const sorter = new Sorter(charactersCollection);
+sorter.sort();
+console.log(charactersCollection.data);
