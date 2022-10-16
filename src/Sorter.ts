@@ -1,14 +1,17 @@
+//SORTABLE INTERFACE NOT BEING USED
 interface Sortable {
     length: number;
 
-    compare(left: number, right: number): boolean;
+    compare(leftIndex: number, rightIndex: number): boolean;
 
-    swap(left: number, right: number): void;
+    swap(leftIndex: number, rightIndex: number): void;
 }
 
 export abstract class Sorter {
     abstract compare(leftIndex: number, rightIndex: number): boolean;
+
     abstract swap(leftIndex: number, rightIndex: number): void;
+
     abstract length: number;
 
     sort(): void {
